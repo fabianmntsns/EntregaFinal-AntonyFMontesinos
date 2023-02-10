@@ -1,0 +1,145 @@
+
+/* reset */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* estilos header index */
+
+header{
+    nav{
+        .navcontenedor-estilo{
+            padding-left: 10%;
+            .estilo-titulo{
+                font-family: 'Mulish', sans-serif;
+                font-weight: bold;
+                text-align: center;
+            }
+            .togglerindex-estilo{
+                background-color:rgb(203, 245, 232);
+                margin-top: 1rem;
+                border-radius: 10px;   
+            }
+            .divcontenedor-navbarlogos{
+                .togglerindex-estilo{
+                    li{
+                        a{
+                            transition: 0.5s;
+                            .size-logos{
+                                width: 3rem;
+                                height: 3rem;
+                                border-radius: 0;
+                            }
+                        }
+                    }
+                }
+            } 
+            .divcontenedor-navbarlogos {
+                .togglerindex-estilo{
+                    li{
+                        a:hover{
+                            transform: scale(1.1);
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }       
+        }
+    }
+}
+
+
+/* estilos de main index */
+
+.main__index{
+    background-color:rgb(203, 245, 232);
+    h2{
+        background-color: whitesmoke ;
+        font-family: 'Jost', sans-serif;
+        text-align: center;
+        margin: 0; }
+    .contenedorindex{
+        background-color:rgb(203, 245, 232);
+        display: flex;
+        flex-flow: row wrap;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1.25rem;
+        div{
+            background-color:rgb(255, 255, 255);
+            height: 31.25rem;
+            width: 25rem;
+            text-align: center;
+            margin-top: 1.25rem;
+            display: inline-block;
+            h2{
+                font-family: 'Dosis', sans-serif;
+                background-color: whitesmoke;
+                width: 25rem;
+                }
+            img{
+                height: 12.5rem;
+                width: 21.87rem;
+                margin: 1.25rem;
+                }
+            h3{
+                font-family: 'Mulish', sans-serif;
+                font-size: 1rem;
+                background-color: rgb(208, 208, 231);
+                width: 21.87rem;
+                margin: 0 1.56rem 1.56rem 1.56rem;
+            }
+            p{
+                font-family: 'Jost', sans-serif;
+                width: 21.87rem;
+                margin: 0 1.56rem 1.56rem 1.56rem;
+            }
+            }
+    }
+}
+
+/* estilos section index */
+
+.section__index {
+    background-color:rgb(203, 245, 232);
+    height: auto;
+    display: none;
+    .iframe{
+        text-align: center;
+        padding-top: 1.25rem;
+        border-radius: 5px;
+        margin: 1.25rem;
+        .iframe__titulo{
+            font-family: 'Mulish', sans-serif;
+            background-color: whitesmoke;
+        }
+        .iframe__video{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-flow: row wrap;
+        }
+    }
+}
+
+/* estilos de footer index*/
+footer{
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    .footerlogoclubs__img{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        flex-flow: row wrap;
+        display:none;
+        img{
+            
+        }
+    }
+}
+
