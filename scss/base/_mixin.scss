@@ -1,5 +1,6 @@
 //mixin
 
+
 @mixin medidas  ($ancho, $alto){
     width: $ancho;
     height: $alto;
@@ -10,6 +11,11 @@
     margin-bottom: $abajo;
 }
 
+@mixin margen-x ($derecha,$izquierda){
+    margin-right: $derecha;
+    margin-left: $izquierda;
+}
+
 @mixin hover ($scale, $sg){
     transform: $scale;
     transition: $sg;
@@ -18,4 +24,14 @@
 @mixin grid ($columns,$rows){
     grid-template-columns: $columns;
     grid-template-rows: $rows;
+}
+
+@mixin padding-y ($top, $bottom){
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+
+@mixin padding-x ($right, $left){
+    padding-right: $right;
+    padding-left: $left;
 }

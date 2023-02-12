@@ -1,0 +1,231 @@
+@import "../base/extend";
+@import "../base/mixin";
+@import "../base/variables";
+
+/* estilos paginas secundarias */
+
+.header__pages{
+    background-color:$color-headerpages-mobile;
+    height: auto;
+    display: grid;
+    flex-flow: row wrap;
+    justify-items: center;
+    div{
+        margin: 1.25rem;
+        display: inline-flex;
+        align-items: center;
+        flex-flow: row wrap;
+        img{
+            @include medidas (6.25rem, 6.25rem);
+            border-radius: 20px;    
+        }
+    }
+    .tittlepages__h1{
+        color: $color-textoprincipal;
+        font-family: $texto-estilocuatro;
+    }
+    nav{
+        div{
+            ul{
+                li{
+                    a{
+                        transition: 0.5s;
+                        .size-logos{
+                            @extend %size-logos;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+/* estilos header pages */
+
+.main__pages{
+    background-color: $color-principal;
+    .contenedorarticulos__pages{
+        @extend %flex;
+        @include padding-y (1rem, 2rem);
+        height: auto;
+        gap: 1rem;
+        .articulouno__pages{
+            @extend %propiedades-articulospages;
+            h2{
+                @extend %propiedades-subtituloarticulos;
+                p{
+                    padding: 0.6rem;
+
+                }
+                .bonuspages__h2{
+                    margin-top: 6.25rem;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .articulodos__pages{
+            @extend %propiedades-articulospages;
+            h2{
+                @extend %propiedades-subtituloarticulos; 
+            }
+            ul{
+                h3{
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                }
+                li{
+                    list-style: none;
+                    text-align:initial;
+                    margin-left: 6.25rem;    
+                }
+                .trofeologo__img{
+                    margin-top: 1.25rem;
+                    border-radius: 1.25rem;
+                }
+            }
+        }  .campeoneslogo__pages{
+            div{
+                display: inline-block;
+                flex-flow: row wrap;
+                img{
+                    @include medidas (4.3rem, 4.3rem)
+                }
+            }
+        }
+        .articulotres__pages{
+            @extend %propiedades-articulospages;
+            h2{
+                @extend %propiedades-subtituloarticulos;  
+            }
+            p{
+                padding: 0.6rem;
+            } 
+            img{
+                @include padding-x (2rem,2rem);
+                border-radius: 20px;
+            } 
+        }
+    }
+}
+
+/* section pages */ 
+.contenedorsection__pages{
+    h2{
+        background-color: $color-secundario ;
+        font-family: $texto-estilodos;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .bestplayersimg__pages{
+        @extend %flex;
+        font-family: $texto-estilouno;
+        background-color:$color-principal;
+        align-items: center;
+        text-align: center;
+        div{
+            img{
+                @include medidas (17.3rem, 16rem)
+            }
+        }
+    }
+}
+
+.footer__pages{
+    @include padding-y (0.5rem,1rem);
+    .footerredeslogo__img{
+        @extend %flex-footerlogoredes;
+        filter:grayscale(100%);
+    }
+}
+
+/*mq paginas secundarias */
+
+@media screen and (min-width:1024px){
+    .body__pages{
+        display:grid;
+        @include grid (3% 2fr 2fr 2fr,auto);
+        background-color: $color-principal;
+
+        grid-template-areas: 
+
+        "header__pages header__pages header__pages header__pages"
+        "footer__pages main__pages main__pages main__pages"
+        "footer__pages contenedorsection__pages contenedorsection__pages contenedorsection__pages"; 
+    }
+
+    .header__pages{
+        grid-area: header__pages;
+        background-color:rgb(161, 235, 211);
+        justify-content:space-around;
+        display: flex;
+        padding-right: 3rem;
+        nav{
+            .divcontenedor-navbarlogos{
+                ul{
+                    li{
+                        a{
+                            transition: 0.5s;
+                        }
+                        a:hover{
+                            @include hover (scale(1.1),0.3s);
+                        }
+                    }
+                }
+            }
+        }
+    }  
+
+    .main__pages {
+        grid-area: main__pages;
+        .contenedorarticulos__pages{
+            gap:0;
+            padding-left: 2rem;
+            padding-bottom: 0;
+        }
+    }
+
+    .contenedorsection__pages{
+        grid-area: contenedorsection__pages;
+        h2{
+            @include margen-x (5rem,5rem)
+        }
+        .bestplayersimg__pages{
+            div{
+                img{
+                    transition: 0.5s;
+                    margin-bottom: 0.7rem;
+                }
+                img:hover{
+                    @include hover (scale(1.1),0.3s);
+                }
+            }
+        }
+    }
+    .footer__pages{
+        grid-area: footer__pages;
+        writing-mode: vertical-lr;
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: space-around;
+        margin: 3rem;
+        .textofooter__h4{
+            transform: rotate(180deg);
+            margin-top: 1.8;
+        }
+        .footerredeslogo__img{
+            transition: 0.5s;
+        }
+        .footerredeslogo__img a:hover{
+            transform: rotate(360deg);
+            transition: 0.5s;
+        }
+
+    }
+    
+}
+
+

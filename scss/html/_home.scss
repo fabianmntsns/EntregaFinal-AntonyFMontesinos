@@ -23,37 +23,16 @@ header{
                 .togglerindex-estilo{
                     li{
                         a{
-                            transition: 0.5s;
-                            .size-logos{
-                                @include medidas (3rem,3rem);
-                                border-radius: 0;
-                            }
-                        }
+                         .size-logos{
+                            @extend %size-logos;
+                         }
                     }
-                }
-            } 
-        }
-    }
+                 }
+             }
+         } 
+      }
+   }
 }
- /*pseudo clase index*/
-
-  header{
-    nav{
-        .navcontenedor-estilo{
-            .divcontenedor-navbarlogos{
-                .togglerindex-estilo{
-                    ul{
-                        li{
-                            a:hover{
-                                @include hover (1.1, 0.5s);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-  }
 
   /* estilos main index */
 
@@ -69,7 +48,6 @@ header{
         background-color: $color-principal;
         height: auto;
         align-items: center;
-        padding-bottom: 1.25rem;
         @extend %flex;
         div{
             background-color:$color-terciario;
@@ -113,7 +91,8 @@ header{
         text-align: center;
         padding-top: 1.25rem;
         border-radius: 5px;
-        margin: 1.25rem;
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
         .iframe__titulo{
             font-family:$texto-estilouno;
             background-color:$color-secundario;
@@ -128,6 +107,7 @@ header{
 /* estilos footer index */
 
 footer{
+    @include padding-y (0.5rem,1rem);
     .textofooter__h4{
         font-family:$texto-estilotres;
         display: flex;
@@ -135,9 +115,7 @@ footer{
         text-align: center; 
     }
     .footerredeslogo__img{
-        display: flex;
-        justify-content: center;
-        filter:grayscale(100%);
+        @extend %flex-footerlogoredes;
         a{
             img{
                 @include medidas (2.5rem,2.5rem);
@@ -146,8 +124,6 @@ footer{
         }
     }
 }
-
-
 
 /* mq home */
 
@@ -160,34 +136,17 @@ header{
         }
         .divcontenedor-navbarlogos{
             .togglerindex-estilo{
+                @include padding-x (0.5rem, 0.5rem);
                 font-family:$texto-estilotres;
                 background-color: $color-toggler-mq;
                 margin-left: 15%;
-                padding-left: 0.5rem;
-                padding-right: 0.5rem;
                 font-weight: bold;
                 li{
                     a{
                         transition: 0.5s;
                     }
-                }
-            }
-        }
-    }
-}
-
-}
-
-/* pseudo clase index header mq*/
-
-header{
-    nav{
-        .divcontenedor-navbarlogos{
-            .togglerindex-estilo{
-                li{
                     a:hover{
-                        transform: scale(1.1);
-                        transition: 0.5s;
+                        @include hover (scale(1.1),0.3s)
                     }
                 }
             }
@@ -210,6 +169,9 @@ header{
         div{
             img{
                 transition: 0.5s;
+            }
+            img:hover{
+                @include hover (scale(1.1),0.3s);
             }
         }
     }
@@ -239,17 +201,6 @@ header{
     }
 }
 
-/* pseudo clases main index mq*/
-.main__index{
-    .contenedorindex{
-        div{
-            img:hover{
-                @include hover (1.1, 0.3s)
-            }
-        }
-    }
-}
-
 /* mq section index */
 
 .section__index{
@@ -260,4 +211,5 @@ header{
             margin-top: 1rem;
         }
     }
+  }
 }

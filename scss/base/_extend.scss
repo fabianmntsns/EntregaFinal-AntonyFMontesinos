@@ -1,8 +1,42 @@
 //extend
 
 
-%flex{ //esta aplicado en .iframe__video, .bestplayersimg__pages .contenedorindex
+%flex{
 display: flex;
 justify-content: center; 
 flex-flow: row wrap;
+}
+
+
+%size-logos{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0;
+}
+
+%propiedades-articulospages{
+    background-color:rgb(255, 255, 255);
+    font-family: 'Mulish', sans-serif;
+    height: auto;
+    width: 24.5rem;
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    display: inline-block;
+    border-radius: 20px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+%propiedades-subtituloarticulos{
+    color: black;
+    background-color: whitesmoke ;
+    margin-bottom: 1.87rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+%flex-footerlogoredes{
+    display: flex;
+    justify-content: center;
 }
