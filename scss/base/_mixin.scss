@@ -1,0 +1,21 @@
+//mixin
+
+@mixin medidas  ($ancho, $alto){
+    width: $ancho;
+    height: $alto;
+}
+
+@mixin margen-y ($arriba, $abajo){
+    margin-top: $arriba;
+    margin-bottom: $abajo;
+}
+
+@mixin hover ($scale, $sg){
+    transform: $scale;
+    transition: $sg;
+}
+
+@mixin grid ($columns,$rows){
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+}

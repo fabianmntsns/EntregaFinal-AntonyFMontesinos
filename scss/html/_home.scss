@@ -1,0 +1,263 @@
+@import "../base/extend";
+@import "../base/mixin";
+@import "../base/variables";
+
+
+/* estilos header index */
+
+header{
+    nav{
+        .navcontenedor-estilo{
+            padding-left: 10%;
+            .estilo-titulo{
+                font-family: $texto-estilouno;
+                font-weight: bold;
+                text-align: center;
+            }
+            .togglerindex-estilo{
+                background-color:$color-principal;
+                margin-top: 1rem;
+                border-radius: 10px;   
+            }
+            .divcontenedor-navbarlogos{
+                .togglerindex-estilo{
+                    li{
+                        a{
+                            transition: 0.5s;
+                            .size-logos{
+                                @include medidas (3rem,3rem);
+                                border-radius: 0;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+ /*pseudo clase index*/
+
+  header{
+    nav{
+        .navcontenedor-estilo{
+            .divcontenedor-navbarlogos{
+                .togglerindex-estilo{
+                    ul{
+                        li{
+                            a:hover{
+                                @include hover (1.1, 0.5s);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }
+
+  /* estilos main index */
+
+  .main__index{
+    background-color: $color-principal;
+    h2{
+        background-color: $color-secundario ;
+        font-family: $texto-estilodos;
+        text-align: center;
+        margin: 0;
+    }
+    .contenedorindex{
+        background-color: $color-principal;
+        height: auto;
+        align-items: center;
+        padding-bottom: 1.25rem;
+        @extend %flex;
+        div{
+            background-color:$color-terciario;
+            @include medidas (25rem,31.25rem);
+            text-align: center;
+            margin-top: 1.25rem;
+            display: inline-block;
+            h2{
+                font-family: $texto-estilotres;
+                background-color: $color-secundario;
+                width: 25rem;
+            }
+            img{
+                @include medidas (21.87rem, 12.5rem);
+                margin: 1.25rem;
+            }
+            h3{
+                font-family: $texto-estilouno;
+                font-size: 1rem;
+                background-color: $color-h3;
+                width: 21.87rem;
+                margin: 0 1.56rem 1.56rem 1.56rem;
+            }
+            p{
+                font-family: $texto-estilodos;
+                width: 21.87rem;
+                margin: 0 1.56rem 1.56rem 1.56rem;
+            }
+        }
+
+    }
+  }
+
+  /* estilos section index*/
+
+.section__index{
+    background-color:$color-principal;
+    height: auto;
+    display: none;
+    .iframe{
+        text-align: center;
+        padding-top: 1.25rem;
+        border-radius: 5px;
+        margin: 1.25rem;
+        .iframe__titulo{
+            font-family:$texto-estilouno;
+            background-color:$color-secundario;
+        }
+        .iframe__video{
+            @extend %flex;
+            text-align: center;
+        }
+    }
+}
+
+/* estilos footer index */
+
+footer{
+    .textofooter__h4{
+        font-family:$texto-estilotres;
+        display: flex;
+        justify-content: center;
+        text-align: center; 
+    }
+    .footerredeslogo__img{
+        display: flex;
+        justify-content: center;
+        filter:grayscale(100%);
+        a{
+            img{
+                @include medidas (2.5rem,2.5rem);
+                margin: 1rem 1rem 0 1rem;
+            }
+        }
+    }
+}
+
+
+
+/* mq home */
+
+@media screen and (min-width:1024px){
+
+header{
+    nav{
+        .navcontenedor-estilo{
+            padding-left: 10%;
+        }
+        .divcontenedor-navbarlogos{
+            .togglerindex-estilo{
+                font-family:$texto-estilotres;
+                background-color: $color-toggler-mq;
+                margin-left: 15%;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                font-weight: bold;
+                li{
+                    a{
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+}
+
+/* pseudo clase index header mq*/
+
+header{
+    nav{
+        .divcontenedor-navbarlogos{
+            .togglerindex-estilo{
+                li{
+                    a:hover{
+                        transform: scale(1.1);
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* mq de main index */
+
+.main__index{
+    .contenedorindex{
+        display: grid;
+        @include grid (auto,auto);
+
+        grid-template-areas: 
+        "contenedor__noticiauno contenedor__noticiados contenedor__noticiatres"
+        "contenedor__noticiacuatro contenedor__noticiacinco contenedor__noticiaseis";
+        justify-content: center;
+        gap:1rem;
+        div{
+            img{
+                transition: 0.5s;
+            }
+        }
+    }
+    
+    .contenedor__noticiauno {
+        grid-area: contenedor__noticiauno;
+    }
+
+    .contenedor__noticiados {
+        grid-area:contenedor__noticiados;
+    }
+
+    .contenedor__noticiatres{
+        grid-area: contenedor__noticiatres;
+    }
+
+    .contenedor__noticiacuatro{
+        grid-area: contenedor__noticiacuatro;
+    }
+
+    .contenedor__noticiacinco{
+        grid-area: contenedor__noticiacinco;
+    }
+
+    .contenedor__noticiaseis{
+        grid-area: contenedor__noticiaseis;
+    }
+}
+
+/* pseudo clases main index mq*/
+.main__index{
+    .contenedorindex{
+        div{
+            img:hover{
+                @include hover (1.1, 0.3s)
+            }
+        }
+    }
+}
+
+/* mq section index */
+
+.section__index{
+    display: block;
+    padding-bottom: 1rem;
+    div{
+        .iframe__video{
+            margin-top: 1rem;
+        }
+    }
+}
