@@ -184,7 +184,7 @@ footer {
       transition: 0.3s; }
   /* mq de main index */
   .main__index .contenedorindex {
-    background-image: url(../../img/backgroundballgif.gif);
+    background-image: url(../img/backgroundballgif.gif);
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
