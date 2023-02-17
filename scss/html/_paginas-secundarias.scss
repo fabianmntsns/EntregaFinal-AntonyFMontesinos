@@ -143,6 +143,12 @@
 
 /*mq paginas secundarias */
 
+@media screen and (min-width:768px){
+    body{
+        background-color: blue;
+    }
+}
+
 @media screen and (min-width:1024px){
     .body__pages{
         display:grid;

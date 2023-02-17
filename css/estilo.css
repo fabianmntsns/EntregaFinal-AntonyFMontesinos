@@ -215,7 +215,7 @@ footer {
       grid-area: contenedor__noticiaseis; }
   /* mq section index */
   .section__index {
-    background-image: linear-gradient(#333333, white);
+    background-image: linear-gradient(#cee9f0, white);
     display: block;
     padding-bottom: 1rem; }
     .section__index div .iframe__video {
@@ -338,6 +338,10 @@ footer .footerredeslogo__img, .footer__pages .footerredeslogo__img {
     filter: grayscale(100%); }
 
 /*mq paginas secundarias */
+@media screen and (min-width: 768px) {
+  body {
+    background-color: blue; } }
+
 @media screen and (min-width: 1024px) {
   .body__pages {
     display: grid;
