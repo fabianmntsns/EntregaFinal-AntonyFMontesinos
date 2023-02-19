@@ -5,41 +5,53 @@
 /* estilos paginas secundarias */
 
 .header__pages{
-    background-color:$color-headerpages-mobile;
-    height: auto;
-    display: grid;
-    flex-flow: row wrap;
-    justify-items: center;
-    div{
-        margin: 1.25rem;
-        display: inline-flex;
-        align-items: center;
+    .contenedorheader__pages{
+        background-color:$color-headerpages-mobile;
+        height: auto;
+        display: grid;
         flex-flow: row wrap;
-        img{
-            @include medidas (6.25rem, 6.25rem);
-            border-radius: 20px;    
-        }
-    }
-    .tittlepages__h1{
-        color: $color-textoprincipal;
-        font-family: $texto-estilocuatro;
-    }
-    nav{
+        justify-items: center;
         div{
-            ul{
-                li{
-                    a{
-                        transition: 0.5s;
-                        .size-logos{
-                            @extend %size-logos;
+            .banderaheader__pages{
+             border-radius: 20px;        
+             margin: 0.5rem;
+             }
+             img{
+             @include medidas (4.25rem, 4.25rem);
+             border-radius: 0px;    
+            }
+        }
+        .tittlepages__h1{
+            h1{
+            color: $color-textoprincipal;
+            font-family: $texto-estilocuatro;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 0.4rem;
+            border-radius: 10px;
+            background-color: rgb(203,245,232);
+            }
+        } 
+        nav{
+            text-align: center;
+            div{
+                .divcontenedor-navbarlogos{   
+                    ul{
+                        li{
+                            a{
+                            transition: 0.5s;
+                            .size-logos{
+                               @extend %size-logos;
+                                }
+                            }
                         }
                     }
                 }
-            }
-
+            }    
         }
     }
 }
+    
 
 /* estilos main pages */
 
@@ -54,13 +66,9 @@
             @extend %propiedades-articulospages;
             h2{
                 @extend %propiedades-subtituloarticulos;
-                p{
-                    padding: 0.6rem;
-
-                }
-                .bonuspages__h2{
-                    margin-top: 6.25rem;
-                }
+            }
+            p{
+                padding: 0.5rem;
             }
         }
         .articulodos__pages{
@@ -102,7 +110,7 @@
                 @extend %propiedades-subtituloarticulos;  
             }
             p{
-                padding: 0.6rem;
+                padding: 0.5rem;
             } 
             img{
                 @include padding-x (2rem,2rem);
@@ -123,14 +131,14 @@
         margin-bottom: 0;
     }
     .bestplayersimg__pages{
-        @extend %flex;
+        display: block;
         font-family: $texto-estilouno;
         background-color:$color-principal;
         align-items: center;
         text-align: center;
         div{
             img{
-                @include medidas (16rem, 16rem)
+                @include medidas (14rem, 14rem)
             }
         }
     }
@@ -148,7 +156,33 @@
 
 @media screen and (min-width:768px){
 
+    .header__pages{
+        .contenedorheader__pages{
+            div{
+                img{
+                    @include medidas (5.25rem,5.25rem);
+                }
+            }  
+            .tittlepages__h1{
+                h1{
+                font-size: 1.8rem;
+                }
+             }      
+        }
+    }
+    .main__pages {
+        .contenedorarticulos__pages {
+            .articulotres__pages{
+                visibility: hidden;
+                position: absolute;
+
+            }
+        }
+    }
 }
+     
+
+    
 
 @media screen and (min-width:1024px){
     .body__pages{
@@ -161,78 +195,135 @@
         "header__pages header__pages header__pages header__pages"
         "footer__pages main__pages main__pages main__pages"
         "footer__pages contenedorsection__pages contenedorsection__pages contenedorsection__pages"; 
-    }
-
-    .header__pages{
-        grid-area: header__pages;
-        background-color:rgb(161, 235, 211);
-        justify-content:space-around;
-        display: flex;
-        padding-right: 3rem;
-        nav{
-            .divcontenedor-navbarlogos{
-                ul{
-                    li{
-                        a{
-                            transition: 0.5s;
-                        }
-                        a:hover{
-                            @include hover (scale(1.1),0.3s);
+        .header__pages{
+            background-color:rgb(161, 235, 211);
+            grid-area: header__pages;
+            .contenedorheader__pages{
+                justify-content:space-between;
+                display: flex;
+                 align-items: center;
+                @include margen-x (3rem,3rem);
+                div{
+                    img{
+                    @include medidas (6.25rem, 6.25rem)
+                    }
+                }
+                .tittlepages__h1{
+                    h1{
+                        font-size: 2.5rem;
+                    }
+                }
+             nav{
+                .divcontenedor-navbarlogos{
+                    ul{
+                        li{
+                            a{
+                                transition: 0.5s;
+                              }
+                            a:hover{
+                                @include hover (scale(1.1),0.3s);
+                            }
                         }
                     }
                 }
             }
-        }
-    }  
+        }  
 
-    .main__pages {
-        grid-area: main__pages;
-        .contenedorarticulos__pages{
-            gap:0;
-            padding-left: 2rem;
-            padding-bottom: 0;
-        }
     }
-
-    .contenedorsection__pages{
-        grid-area: contenedorsection__pages;
-        h2{
-            @include margen-x (5rem,5rem)
-        }
-        .bestplayersimg__pages{
-            div{
-                img{
-                    transition: 0.5s;
-                    margin-bottom: 0.7rem;
+        
+        .main__pages {
+            grid-area: main__pages;
+            .contenedorarticulos__pages{
+                gap:0;
+                padding-left: 2rem;
+                padding-bottom: 2rem;
+                .articulouno__pages{
+                    font-size: 1.2rem;
+                    width: 25rem ;
+                    h2{
+                        font-size: 1.4rem;
+                    }
                 }
-                img:hover{
-                    @include hover (scale(1.1),0.3s);
+                .articulodos__pages{
+                    font-size: 1.2rem;
+                    width: 25rem;
+                    h2{
+                        font-size: 1.4rem;
+                    }
                 }
+                ul{
+                    h3{
+                        font-size: 1.4rem;
+                    }
+                }
+                .campeoneslogo__pages{
+                    div{
+                        img{
+                            @include medidas (5rem,5rem);
+                        }
+                        h5{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                .articulotres__pages{
+                    font-size: 1.2rem;
+                    width: 25rem ;
+                    position: relative;
+                    visibility: visible;
+                    h2{
+                        font-size: 1.4rem;
+                    }
+                }     
             }
         }
-    }
-    .footer__pages{
-        grid-area: footer__pages;
-        writing-mode: vertical-lr;
-        display: flex;
-        align-items: center;
-        position: relative;
-        justify-content: space-around;
-        margin: 3rem;
-        .textofooter__h4{
-            transform: rotate(180deg);
-            margin-top: 1.8;
-        }
-        .footerredeslogo__img{
-            transition: 0.5s;
-        }
-        .footerredeslogo__img a:hover{
-            transform: rotate(360deg);
-            transition: 0.5s;
-        }
 
-    }
+        .contenedorsection__pages{
+            grid-area: contenedorsection__pages;
+        
+            h2{
+            @include margen-x (5rem,5rem)
+            }
+            .bestplayersimg__pages{
+                display: flex;
+                justify-content: center;
+                div{
+                    img{
+                    transition: 0.5s;
+                    margin-bottom: 0.7rem;
+                    @include medidas (16rem,16rem)
+                    }
+                    img:hover{
+                    @include hover (scale(1.1),0.3s);
+                    }
+                }
+             }
+        }
+            .footer__pages{
+             grid-area: footer__pages;
+             writing-mode: vertical-lr;
+             display: flex;
+             align-items: center;
+             position: relative;
+             justify-content: space-around;
+             margin: 3rem;
+             .textofooter__h4{
+                 transform: rotate(180deg);
+                 margin-top: 1.8;
+             }
+             .footerredeslogo__img{
+                 transition: 0.5s;
+             }
+             .footerredeslogo__img a:hover{
+                 transform: rotate(360deg);
+                 transition: 0.5s;
+             }
+     
+         }
     
+    }
 }
+
+    
 
 
