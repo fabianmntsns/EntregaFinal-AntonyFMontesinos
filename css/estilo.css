@@ -399,7 +399,11 @@ footer .footerredeslogo__img, .footer__pages .footerredeslogo__img {
           font-size: 1.4rem; }
         .body__pages .main__pages .contenedorarticulos__pages .campeoneslogo__pages div img {
           width: 5rem;
-          height: 5rem; }
+          height: 5rem;
+          transition: 0.5s; }
+        .body__pages .main__pages .contenedorarticulos__pages .campeoneslogo__pages div img:hover {
+          transform: scale(1.1);
+          transition: 0.3s; }
         .body__pages .main__pages .contenedorarticulos__pages .campeoneslogo__pages div h5 {
           font-size: 1rem; }
         .body__pages .main__pages .contenedorarticulos__pages .articulotres__pages {
@@ -409,6 +413,11 @@ footer .footerredeslogo__img, .footer__pages .footerredeslogo__img {
           visibility: visible; }
           .body__pages .main__pages .contenedorarticulos__pages .articulotres__pages h2 {
             font-size: 1.4rem; }
+          .body__pages .main__pages .contenedorarticulos__pages .articulotres__pages img {
+            transition: 0.5s; }
+          .body__pages .main__pages .contenedorarticulos__pages .articulotres__pages img:hover {
+            transform: scale(1.1);
+            transition: 0.3s; }
     .body__pages .contenedorsection__pages {
       grid-area: contenedorsection__pages; }
       .body__pages .contenedorsection__pages h2 {
