@@ -49,7 +49,8 @@ header nav .navcontenedor-estilo .estilo-titulo {
 
 header nav .navcontenedor-estilo .togglerindex-estilo {
   margin-top: 1rem;
-  border-radius: 10px; }
+  border-radius: 10px;
+  background-color: white; }
 
 header nav .navcontenedor-estilo .divcontenedor-navbarlogos .togglerindex-estilo li a {
   font-size: 0; }
