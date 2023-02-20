@@ -29,7 +29,7 @@
             font-weight: bold;
             padding: 0.4rem;
             border-radius: 10px;
-            background-color: rgb(203,245,232);
+            background-color: $color-principal;
             }
         } 
         nav{
@@ -196,7 +196,7 @@
         "footer__pages main__pages main__pages main__pages"
         "footer__pages contenedorsection__pages contenedorsection__pages contenedorsection__pages"; 
         .header__pages{
-            background-color:rgb(161, 235, 211);
+            background-color:$color-headerpages-mq;
             grid-area: header__pages;
             .contenedorheader__pages{
                 justify-content:space-between;

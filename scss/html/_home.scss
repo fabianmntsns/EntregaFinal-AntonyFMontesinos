@@ -19,7 +19,6 @@ header{
                 text-align: center;
             }
             .togglerindex-estilo{
-                background-color:$color-principal;
                 margin-top: 1rem;
                 border-radius: 10px;   
             }
@@ -224,7 +223,6 @@ header{
                 .togglerindex-estilo{
                     @include padding-x (0.5rem, 0.5rem);
                     font-family:$texto-estilotres;
-                    background-color: $color-toggler-mq;
                     margin-left: 10%;
                         li{
                             a{  font-size: 1rem;

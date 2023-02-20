@@ -48,7 +48,6 @@ header nav .navcontenedor-estilo .estilo-titulo {
   text-align: center; }
 
 header nav .navcontenedor-estilo .togglerindex-estilo {
-  background-color: #cbf5e8;
   margin-top: 1rem;
   border-radius: 10px; }
 
@@ -174,7 +173,6 @@ footer {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
     font-family: "Dosis", sans-serif;
-    background-color: #bbbbbb;
     margin-left: 10%; }
     header nav .navcontenedor-estilo .divcontenedor-navbarlogos .togglerindex-estilo li a {
       font-size: 1rem;
