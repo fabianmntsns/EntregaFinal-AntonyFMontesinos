@@ -138,11 +138,17 @@
         text-align: center;
         div{
             img{
-                @include medidas (14rem, 14rem)
+                @include medidas (14rem, 14rem);
+            }
+            .logofortablet__pages{
+                visibility: hidden;
+                position: absolute;
             }
         }
     }
 }
+
+/* section pages*/
 
 .footer__pages{
     @include padding-y (0.5rem,1rem);
@@ -179,9 +185,21 @@
             }
         }
     }
-}
-     
 
+
+    .contenedorsection__pages{
+        .bestplayersimg__pages{
+            div{
+                .logofortablet__pages{
+                    @include medidas (6rem,6rem);
+                    visibility: visible;
+                    position: relative;
+                }
+            }
+        }
+    }
+ 
+}
     
 
 @media screen and (min-width:1024px){
@@ -305,6 +323,10 @@
                     }
                     img:hover{
                     @include hover (scale(1.1),0.3s);
+                    }
+                    .logofortablet__pages{
+                        visibility: hidden;
+                        position: absolute;
                     }
                 }
              }

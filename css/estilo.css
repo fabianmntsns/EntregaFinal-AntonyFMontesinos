@@ -335,7 +335,11 @@ footer .footerredeslogo__img, .footer__pages .footerredeslogo__img {
   .contenedorsection__pages .bestplayersimg__pages div img {
     width: 14rem;
     height: 14rem; }
+  .contenedorsection__pages .bestplayersimg__pages div .logofortablet__pages {
+    visibility: hidden;
+    position: absolute; }
 
+/* section pages*/
 .footer__pages {
   padding-top: 0.5rem;
   padding-bottom: 1rem; }
@@ -351,7 +355,12 @@ footer .footerredeslogo__img, .footer__pages .footerredeslogo__img {
     font-size: 1.8rem; }
   .main__pages .contenedorarticulos__pages .articulotres__pages {
     visibility: hidden;
-    position: absolute; } }
+    position: absolute; }
+  .contenedorsection__pages .bestplayersimg__pages div .logofortablet__pages {
+    width: 6rem;
+    height: 6rem;
+    visibility: visible;
+    position: relative; } }
 
 @media screen and (min-width: 1024px) {
   .body__pages {
@@ -434,6 +443,9 @@ footer .footerredeslogo__img, .footer__pages .footerredeslogo__img {
         .body__pages .contenedorsection__pages .bestplayersimg__pages div img:hover {
           transform: scale(1.1);
           transition: 0.3s; }
+        .body__pages .contenedorsection__pages .bestplayersimg__pages div .logofortablet__pages {
+          visibility: hidden;
+          position: absolute; }
     .body__pages .footer__pages {
       grid-area: footer__pages;
       writing-mode: vertical-lr;
