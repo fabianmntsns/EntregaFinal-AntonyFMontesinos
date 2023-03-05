@@ -44,7 +44,7 @@ footer .footerredeslogo__img, .footer__pages .footerredeslogo__img {
 
 .header__index nav .navcontenedor-estilo .estilo-titulo {
   font-family: 'Bangers', cursive;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold; }
 
 .header__index nav .navcontenedor-estilo .divmenu__index h2 {
@@ -129,7 +129,8 @@ footer {
 /* mq pantalla tablet */
 @media screen and (min-width: 768px) {
   .header__index nav .navcontenedor-estilo .estilo-titulo {
-    padding-left: 5%; }
+    padding-left: 5%;
+    font-size: 2rem; }
   .main__index .contenedorindex {
     display: grid;
     grid-template-columns: auto;
