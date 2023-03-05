@@ -9,7 +9,7 @@
   justify-content: center;
   flex-flow: row wrap; }
 
-header nav .navcontenedor-estilo .divcontenedor-navbarlogos .togglerindex-estilo li a .size-logos, .header__pages .contenedorheader__pages nav div .divcontenedor-navbarlogos ul li a .size-logos {
+.header__index nav .navcontenedor-estilo .divmenu__index .divcontenedor-navbarlogos .togglerindex-estilo li a .size-logos, .header__pages .contenedorheader__pages nav div .divcontenedor-navbarlogos ul li a .size-logos {
   width: 3rem;
   height: 3rem;
   border-radius: 0; }
@@ -39,21 +39,21 @@ footer .footerredeslogo__img, .footer__pages .footerredeslogo__img {
   justify-content: center; }
 
 /* estilos header index */
-header nav .navcontenedor-estilo h1 img {
+.header__index nav .navcontenedor-estilo h1 img {
   height: 0; }
 
-header nav .navcontenedor-estilo .estilo-titulo {
-  font-family: "Mulish", sans-serif;
-  font-weight: bold;
-  text-align: center; }
+.header__index nav .navcontenedor-estilo .estilo-titulo {
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  font-weight: bold; }
 
-header nav .navcontenedor-estilo .togglerindex-estilo {
+.header__index nav .navcontenedor-estilo .divmenu__index h2 {
+  font-size: 0; }
+
+.header__index nav .navcontenedor-estilo .divmenu__index .togglerindex-estilo {
   margin-top: 1rem;
   border-radius: 10px;
   background-color: white; }
-
-header nav .navcontenedor-estilo .divcontenedor-navbarlogos .togglerindex-estilo li a {
-  font-size: 0; }
 
 /* estilos main index */
 .main__index {
@@ -128,7 +128,7 @@ footer {
 
 /* mq pantalla tablet */
 @media screen and (min-width: 768px) {
-  header nav .navcontenedor-estilo .estilo-titulo {
+  .header__index nav .navcontenedor-estilo .estilo-titulo {
     padding-left: 5%; }
   .main__index .contenedorindex {
     display: grid;
@@ -168,20 +168,28 @@ footer {
 /* mq pantalla escritorio home */
 /*header*/
 @media screen and (min-width: 1024px) {
-  header nav .navcontenedor-estilo h1 img {
+  .header__index nav .navcontenedor-estilo h1 img {
     height: 5rem; }
-  header nav .navcontenedor-estilo .divcontenedor-navbarlogos .togglerindex-estilo {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-    font-family: "Dosis", sans-serif;
-    margin-left: 10%; }
-    header nav .navcontenedor-estilo .divcontenedor-navbarlogos .togglerindex-estilo li a {
-      font-size: 1rem;
-      transition: 0.5s; }
-    header nav .navcontenedor-estilo .divcontenedor-navbarlogos .togglerindex-estilo li a:hover {
-      transform: scale(1.1);
-      transition: 0.3s; }
+  .header__index nav .navcontenedor-estilo .divmenu__index {
+    margin-right: 5%;
+    display: flex;
+    align-items: center; }
+    .header__index nav .navcontenedor-estilo .divmenu__index h2 {
+      font-size: 1rem; }
+    .header__index nav .navcontenedor-estilo .divmenu__index .divcontenedor-navbarlogos .togglerindex-estilo {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+      margin-top: 0;
+      font-family: "Dosis", sans-serif; }
+      .header__index nav .navcontenedor-estilo .divmenu__index .divcontenedor-navbarlogos .togglerindex-estilo li a {
+        transition: 0.5s; }
+      .header__index nav .navcontenedor-estilo .divmenu__index .divcontenedor-navbarlogos .togglerindex-estilo li a:hover {
+        transform: scale(1.1);
+        transition: 0.3s; }
   /* mq de main index */
+  .main__index h2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
   .main__index .contenedorindex {
     background-image: url(../img/backgroundballgif.gif);
     display: grid;
@@ -225,7 +233,7 @@ footer {
   justify-content: center;
   flex-flow: row wrap; }
 
-header nav .navcontenedor-estilo .divcontenedor-navbarlogos .togglerindex-estilo li a .size-logos, .header__pages .contenedorheader__pages nav div .divcontenedor-navbarlogos ul li a .size-logos {
+.header__index nav .navcontenedor-estilo .divmenu__index .divcontenedor-navbarlogos .togglerindex-estilo li a .size-logos, .header__pages .contenedorheader__pages nav div .divcontenedor-navbarlogos ul li a .size-logos {
   width: 3rem;
   height: 3rem;
   border-radius: 0; }
@@ -270,7 +278,7 @@ footer .footerredeslogo__img, .footer__pages .footerredeslogo__img {
     border-radius: 0px; }
   .header__pages .contenedorheader__pages .tittlepages__h1 h1 {
     color: black;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Bangers', cursive;
     font-size: 1.5rem;
     font-weight: bold;
     padding: 0.4rem;
@@ -348,11 +356,14 @@ footer .footerredeslogo__img, .footer__pages .footerredeslogo__img {
 
 /*mq paginas secundarias */
 @media screen and (min-width: 768px) {
-  .header__pages .contenedorheader__pages div img {
-    width: 5.25rem;
-    height: 5.25rem; }
   .header__pages .contenedorheader__pages .tittlepages__h1 h1 {
     font-size: 1.8rem; }
+  .main__pages .contenedorarticulos__pages .articulouno__pages .bonuspages__h2 {
+    margin-top: 30%; }
+  .main__pages .contenedorarticulos__pages .articulodos__pages .logosbundesliga__estilo {
+    margin-top: 10%; }
+  .main__pages .contenedorarticulos__pages .articulodos__pages .logospremier__estilo {
+    margin-top: 15%; }
   .main__pages .contenedorarticulos__pages .articulotres__pages {
     visibility: hidden;
     position: absolute; }
@@ -379,8 +390,8 @@ footer .footerredeslogo__img, .footer__pages .footerredeslogo__img {
         margin-right: 3rem;
         margin-left: 3rem; }
         .body__pages .header__pages .contenedorheader__pages div img {
-          width: 6.25rem;
-          height: 6.25rem; }
+          width: 5.25rem;
+          height: 5.25rem; }
         .body__pages .header__pages .contenedorheader__pages .tittlepages__h1 h1 {
           font-size: 2.5rem; }
         .body__pages .header__pages .contenedorheader__pages nav .divcontenedor-navbarlogos ul li a {
@@ -396,12 +407,12 @@ footer .footerredeslogo__img, .footer__pages .footerredeslogo__img {
         padding-bottom: 2rem; }
         .body__pages .main__pages .contenedorarticulos__pages .articulouno__pages {
           font-size: 1.2rem;
-          width: 25rem; }
+          width: 24rem; }
           .body__pages .main__pages .contenedorarticulos__pages .articulouno__pages h2 {
             font-size: 1.4rem; }
         .body__pages .main__pages .contenedorarticulos__pages .articulodos__pages {
           font-size: 1.2rem;
-          width: 25rem; }
+          width: 24rem; }
           .body__pages .main__pages .contenedorarticulos__pages .articulodos__pages h2 {
             font-size: 1.4rem; }
         .body__pages .main__pages .contenedorarticulos__pages ul h3 {
@@ -417,7 +428,7 @@ footer .footerredeslogo__img, .footer__pages .footerredeslogo__img {
           font-size: 1rem; }
         .body__pages .main__pages .contenedorarticulos__pages .articulotres__pages {
           font-size: 1.2rem;
-          width: 25rem;
+          width: 24rem;
           position: relative;
           visibility: visible; }
           .body__pages .main__pages .contenedorarticulos__pages .articulotres__pages h2 {
@@ -468,7 +479,7 @@ footer .footerredeslogo__img, .footer__pages .footerredeslogo__img {
   justify-content: center;
   flex-flow: row wrap; }
 
-header nav .navcontenedor-estilo .divcontenedor-navbarlogos .togglerindex-estilo li a .size-logos, .header__pages .contenedorheader__pages nav div .divcontenedor-navbarlogos ul li a .size-logos {
+.header__index nav .navcontenedor-estilo .divmenu__index .divcontenedor-navbarlogos .togglerindex-estilo li a .size-logos, .header__pages .contenedorheader__pages nav div .divcontenedor-navbarlogos ul li a .size-logos {
   width: 3rem;
   height: 3rem;
   border-radius: 0; }

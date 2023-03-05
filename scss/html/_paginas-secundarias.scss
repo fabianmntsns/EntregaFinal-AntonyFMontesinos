@@ -24,7 +24,7 @@
         .tittlepages__h1{
             h1{
             color: $color-textoprincipal;
-            font-family: $texto-estilocuatro;
+            font-family: 'Bangers', cursive;
             font-size: 1.5rem;
             font-weight: bold;
             padding: 0.4rem;
@@ -165,11 +165,6 @@
 
     .header__pages{
         .contenedorheader__pages{
-            div{
-                img{
-                    @include medidas (5.25rem,5.25rem);
-                }
-            }  
             .tittlepages__h1{
                 h1{
                 font-size: 1.8rem;
@@ -179,6 +174,19 @@
     }
     .main__pages {
         .contenedorarticulos__pages {
+            .articulouno__pages{
+                .bonuspages__h2{
+                    margin-top: 30%;
+                }
+            }
+            .articulodos__pages{
+                .logosbundesliga__estilo{
+                    margin-top: 10%;
+                }
+                .logospremier__estilo{
+                    margin-top: 15%;
+                }
+            }
             .articulotres__pages{
                 visibility: hidden;
                 position: absolute;
@@ -224,7 +232,7 @@
                 @include margen-x (3rem,3rem);
                 div{
                     img{
-                    @include medidas (6.25rem, 6.25rem)
+                    @include medidas (5.25rem, 5.25rem)
                     }
                 }
                 .tittlepages__h1{
@@ -258,14 +266,14 @@
                 padding-bottom: 2rem;
                 .articulouno__pages{
                     font-size: 1.2rem;
-                    width: 25rem ;
+                    width: 24rem ;
                     h2{
                         font-size: 1.4rem;
                     }
                 }
                 .articulodos__pages{
                     font-size: 1.2rem;
-                    width: 25rem;
+                    width: 24rem;
                     h2{
                         font-size: 1.4rem;
                     }
@@ -291,7 +299,7 @@
                 }
                 .articulotres__pages{
                     font-size: 1.2rem;
-                    width: 25rem ;
+                    width: 24rem ;
                     position: relative;
                     visibility: visible;
                     h2{
