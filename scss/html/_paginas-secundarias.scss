@@ -15,9 +15,10 @@
             .banderaheader__pages{
              border-radius: 20px;        
              margin: 0.5rem;
+             @include medidas (3.5rem, 3.5rem);
              }
              img{
-             @include medidas (4.25rem, 4.25rem);
+            @include medidas (3.5rem, 3.5rem);
              border-radius: 0px;    
             }
         }

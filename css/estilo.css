@@ -272,10 +272,12 @@ footer .footerredeslogo__img, .footer__pages .footerredeslogo__img {
   justify-items: center; }
   .header__pages .contenedorheader__pages div .banderaheader__pages {
     border-radius: 20px;
-    margin: 0.5rem; }
+    margin: 0.5rem;
+    width: 3.5rem;
+    height: 3.5rem; }
   .header__pages .contenedorheader__pages div img {
-    width: 4.25rem;
-    height: 4.25rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 0px; }
   .header__pages .contenedorheader__pages .tittlepages__h1 h1 {
     color: black;
