@@ -264,6 +264,9 @@ footer .footerredeslogo__img, .footer__pages .footerredeslogo__img {
   justify-content: center; }
 
 /* estilos paginas secundarias */
+.body__pages {
+  overflow-x: hidden; }
+
 .header__pages .contenedorheader__pages {
   background-color: 177, 218, 205;
   height: auto;

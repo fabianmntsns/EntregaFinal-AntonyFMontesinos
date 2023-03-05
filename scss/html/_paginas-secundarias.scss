@@ -4,6 +4,10 @@
 
 /* estilos paginas secundarias */
 
+.body__pages{
+    overflow-x: hidden;
+}
+
 .header__pages{
     .contenedorheader__pages{
         background-color:$color-headerpages-mobile;
